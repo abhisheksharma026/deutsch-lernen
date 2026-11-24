@@ -31,7 +31,7 @@ function index() {
   app.innerHTML = `
   <header class="band"><div class="wrap">
     <h1>Deutsch lernen</h1>
-    <p class="lead">Core German vocabulary from A1 to A2, about 1,300 words, served in small themed batches. Each word comes with a plain meaning, a real-life sentence, its English translation, and for nouns a weird little scene that glues the article to it.*</p>
+    <p class="lead">Core German vocabulary, level by level from A1 upward, served in small themed batches. Each word comes with a plain meaning, a real-life sentence, its English translation, and for nouns a weird little scene that glues the article to it.*</p>
     <div class="cast">
       <div class="who">${FIG.der}<div><b class="c-der">der</b><span>The Superhero. Masculine nouns. Cape, ego, loud entrances.</span></div></div>
       <div class="who">${FIG.die}<div><b class="c-die">die</b><span>The Queen. Feminine nouns. Crown, drama, very high standards.</span></div></div>
@@ -162,7 +162,7 @@ function batch(b) {
 function foot() {
   return `<footer class="band"><div class="wrap">
     <p>* Article memory method: the Superhero Technique by SmarterGerman (<a href="https://smartergerman.com/blog/german-articles/">smartergerman.com</a>). The idea of linking der, die and das to a Superhero, a Queen and a Big Fat German Baby is theirs; every scene, sentence and explanation on this site is original. Their free mini-course explains the method properly and is worth a look.</p>
-    <p>Word scope follows the CEFR A1 and A2 levels, checked against the public Goethe-Institut word lists. The blue / red / green article colours are a common German textbook convention.</p>
+    <p>Word scope follows the CEFR levels, checked against the public Goethe-Institut word lists. The blue / red / green article colours are a common German textbook convention.</p>
   </div></footer>`;
 }
 
