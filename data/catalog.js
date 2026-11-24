@@ -1,4 +1,4 @@
-// Course map, A1.1 to A2.2. A batch becomes clickable once its data file is loaded in index.html.
+// Course map: one entry per level, in course order. A batch becomes clickable once its data file is loaded in index.html.
 window.A1 = window.A1 || { batches: {} };
 A1.tracks = [
   {
