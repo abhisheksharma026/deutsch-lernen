@@ -1,0 +1,78 @@
+// A1.1 Batch 7. Examples only use words from Batches 1-7, plus names, digits and obvious look-alikes (Sofa, Balkon, Lampe, kaputt, super).
+A1.batches["a1-1-b7"] = {
+  lead: "30 words for rooms, furniture and the building you live in, plus the two things every Berlin flat search is about: the Miete and the neighbours. Builds on Batch 6: groß, klein, offen and zu move into your flat.",
+  groups: [
+    { id: "room", t: "Rooms", s: "Every word ending in -ung is die, so die Wohnung. Schlafzimmer and Wohnzimmer are das because das Zimmer is the last part." },
+    { id: "furn", t: "Furniture and fittings", s: "No shortcut here, just the scenes. This is where the Superhero Technique earns its keep." },
+    { id: "build", t: "The building", s: "Keys, stairs and the people above and below you." },
+    { id: "verb", t: "Three verbs for home life", s: "schlafen changes a to ä for du and er/sie: du schläfst, er schläft." },
+    { id: "adj", t: "Describing a flat", s: "The four words you'll use at every flat viewing." },
+    { id: "where", t: "Where in the flat?", s: "Point the way: left, right, up, down, and home." }
+  ],
+  words: [
+    { g: "room", w: "Wohnung", a: "die", pl: "die Wohnungen", ty: "noun", m: "Flat, apartment.", de: "Ich suche eine *Wohnung* in Berlin.", en: "I'm looking for a flat in Berlin.", tip: "-ung is always die: die Wohnung, die Zeitung, die Rechnung. One of the few rules with no exceptions.", sc: "The <b>Queen</b> goes to a Berlin flat viewing. 300 people are already in the queue. She waves her crown to skip ahead. Nobody moves. She ends up number 301." },
+    { g: "room", w: "Zimmer", a: "das", pl: "die Zimmer", ty: "noun", m: "Room.", de: "Die Wohnung hat drei *Zimmer*.", en: "The flat has three rooms.", tip: "Flat ads count rooms without the kitchen and bathroom. A 2-Zimmer-Wohnung is a living room plus one bedroom.", sc: "The <b>Big Fat Baby</b>'s room is filled to the ceiling with rubber ducks. When it opens the door, ten thousand ducks squeak at once." },
+    { g: "room", w: "Küche", a: "die", pl: "die Küchen", ty: "noun", m: "Kitchen.", de: "Die *Küche* ist klein.", en: "The kitchen is small.", tip: "Many German flats are rented without a kitchen. Look for EBK (Einbauküche, fitted kitchen) in the ad.", sc: "The <b>Queen</b> tries to cook for the first time. The kitchen explodes. She walks out with a black face, and her crown has melted into the shape of a pretzel." },
+    { g: "room", w: "Bad", a: "das", pl: "die Bäder", ty: "noun", m: "Bathroom. Also a bath.", de: "Wo ist das *Bad*?", en: "Where is the bathroom?", tip: "Asking for the toilet in a café: Wo ist die Toilette?", sc: "The <b>Big Fat Baby</b> is too big for the bathtub, so it fills the whole bathroom with water and floats around like a happy little island." },
+    { g: "room", w: "Schlafzimmer", a: "das", pl: "die Schlafzimmer", ty: "noun", m: "Bedroom. schlafen (sleep) + Zimmer (room).", de: "Das *Schlafzimmer* ist dunkel.", en: "The bedroom is dark.", sc: "The <b>Big Fat Baby</b>'s bedroom has 50 cots in a row. Every night it rolls from one to the next and never wakes up." },
+    { g: "room", w: "Wohnzimmer", a: "das", pl: "die Wohnzimmer", ty: "noun", m: "Living room. wohnen (live) + Zimmer (room).", de: "Wir essen im *Wohnzimmer*.", en: "We eat in the living room.", sc: "The <b>Big Fat Baby</b> throws a party in the living room for every cat in the building. By midnight the sofa is a scratching post." },
+    { g: "room", w: "Balkon", a: "der", pl: "die Balkone", ty: "noun", m: "Balcony.", de: "Die Wohnung hat einen *Balkon*.", en: "The flat has a balcony.", sc: "Every night the <b>Superhero</b> lands on the wrong balcony, right in the middle of a couple's dinner. He says Entschuldigung and leaves with a Bratwurst." },
+    { g: "furn", w: "Bett", a: "das", pl: "die Betten", ty: "noun", m: "Bed.", de: "Das *Bett* ist neu.", en: "The bed is new.", sc: "The <b>Big Fat Baby</b> uses its bed as a trampoline. One big bounce and it goes straight through the ceiling into the neighbours' kitchen." },
+    { g: "furn", w: "Tisch", a: "der", pl: "die Tische", ty: "noun", m: "Table.", de: "Das Essen ist auf dem *Tisch*.", en: "The food is on the table.", sc: "The <b>Superhero</b> surfs down the Spree standing on a kitchen table, cape flapping, while tourists film him from the bridges." },
+    { g: "furn", w: "Stuhl", a: "der", pl: "die Stühle", ty: "noun", m: "Chair.", de: "Ist der *Stuhl* frei?", en: "Is this chair free?", sc: "The <b>Superhero</b> sits down and the chair collapses under him. Too proud to admit it, he hovers in a sitting position for the whole two-hour meeting." },
+    { g: "furn", w: "Sofa", a: "das", pl: "die Sofas", ty: "noun", m: "Sofa, couch.", de: "Ich schlafe auf dem *Sofa*.", en: "I sleep on the sofa.", sc: "The <b>Big Fat Baby</b> sits down so hard that the sofa folds up around it like a taco. It looks very pleased." },
+    { g: "furn", w: "Schrank", a: "der", pl: "die Schränke", ty: "noun", m: "Cupboard, wardrobe.", de: "Der *Schrank* ist zu groß.", en: "The wardrobe is too big.", sc: "The <b>Superhero</b> changes into his costume inside a wardrobe. He grabs the wrong hanger and comes out wearing Oma's flowery dressing gown." },
+    { g: "furn", w: "Lampe", a: "die", pl: "die Lampen", ty: "noun", m: "Lamp, light.", de: "Die *Lampe* ist kaputt.", en: "The lamp is broken.", sc: "The <b>Queen</b>'s reading lamp is so bright that planes from BER keep trying to land on her balcony." },
+    { g: "furn", w: "Fenster", a: "das", pl: "die Fenster", ty: "noun", m: "Window.", de: "Das *Fenster* ist offen.", en: "The window is open.", tip: "Germans open windows wide for a few minutes, even in winter, to air the flat. It's called lüften, and your landlord will expect it.", sc: "The <b>Big Fat Baby</b> presses its face against the window. The print never comes off, and now people come from all over Berlin to photograph it." },
+    { g: "furn", w: "Tür", a: "die", pl: "die Türen", ty: "noun", m: "Door.", de: "Die *Tür* ist zu.", en: "The door is closed.", sc: "The <b>Queen</b>'s dress is too wide for the door. Two guards push her from behind until she shoots through like a cork. Pop!" },
+    { g: "build", w: "Haus", a: "das", pl: "die Häuser", ty: "noun", m: "House. Also a building with flats in it.", de: "Das *Haus* ist alt, aber schön.", en: "The building is old, but beautiful.", sc: "The <b>Big Fat Baby</b> carries a whole house on its back like a snail. Whenever the neighbours get too loud, it simply crawls away." },
+    { g: "build", w: "Treppe", a: "die", pl: "die Treppen", ty: "noun", m: "Stairs, staircase.", de: "Die *Treppe* ist links.", en: "The stairs are on the left.", sc: "The <b>Queen</b> refuses to climb stairs. Four guards carry her up five floors. On the fourth floor, all four collapse at once." },
+    { g: "build", w: "Schlüssel", a: "der", pl: "die Schlüssel", ty: "noun", m: "Key.", de: "Wo ist mein *Schlüssel*?", en: "Where's my key?", tip: "Many German doors lock automatically when they shut. Locksmiths at night are very expensive, so check your pocket before you close the door.", sc: "The <b>Superhero</b> locks himself out. Super strength, laser eyes, flight: nothing works. He has to call a locksmith, who charges him 300 euros." },
+    { g: "build", w: "Nachbar", a: "der", pl: "die Nachbarn", ty: "noun", m: "Neighbour (male). Female: die Nachbarin.", de: "Mein *Nachbar* ist laut.", en: "My neighbour is loud.", sc: "The <b>Superhero</b>'s neighbour plays the trumpet at 6 a.m. The Superhero flies him to the moon. He can still hear the trumpet." },
+    { g: "build", w: "Miete", a: "die", pl: "die Mieten", ty: "noun", m: "Rent.", de: "Die *Miete* ist teuer.", en: "The rent is expensive.", tip: "Kaltmiete = rent only. Warmmiete = rent plus heating and building costs. Always ask which one an ad means.", sc: "The <b>Queen</b> pays her rent with jewels from her crown. Every month the crown gets smaller. By December it's a ring." },
+    { g: "verb", w: "schlafen", ty: "verb, irregular", m: "To sleep.", f: "ich <b>schlafe</b>, du <b>schläfst</b>, er/sie <b>schläft</b>", de: "*Schläfst* du gut?", en: "Do you sleep well?" },
+    { g: "verb", w: "kochen", ty: "verb", m: "To cook. Also to boil.", f: "ich <b>koche</b>, du <b>kochst</b>, er/sie <b>kocht</b>", de: "Ich *koche* heute Abend.", en: "I'm cooking tonight." },
+    { g: "verb", w: "putzen", ty: "verb", m: "To clean.", f: "ich <b>putze</b>, du <b>putzt</b>, er/sie <b>putzt</b>", de: "Am Samstag *putze* ich die Wohnung.", en: "On Saturday I clean the flat.", tip: "Many buildings have a cleaning plan for the stairs, and tenants take turns. Check the notice board in the hallway." },
+    { g: "adj", w: "schön", ty: "adjective", m: "Beautiful, nice, lovely.", de: "Die Wohnung ist *schön*!", en: "The flat is lovely!" },
+    { g: "adj", w: "neu", ty: "adjective", m: "New.", de: "Das Sofa ist *neu*.", en: "The sofa is new." },
+    { g: "adj", w: "hell / dunkel", ty: "adjectives", m: "Bright, full of light / dark.", de: "Das Zimmer ist *hell*.", en: "The room is bright.", tip: "hell is one of the biggest selling points in a German flat ad." },
+    { g: "adj", w: "laut", ty: "adjective", m: "Loud, noisy. The opposite is leise (quiet).", de: "Es ist *laut* hier.", en: "It's noisy here.", tip: "Quiet hours: usually 22 to 6 Uhr, and all day Sunday. No drilling, no loud music." },
+    { g: "where", w: "oben / unten", ty: "adverbs", m: "Upstairs, above / downstairs, below.", de: "Mein Nachbar wohnt *oben*.", en: "My neighbour lives upstairs." },
+    { g: "where", w: "links / rechts", ty: "adverbs", m: "On the left / on the right.", de: "Das Bad ist *links*.", en: "The bathroom is on the left." },
+    { g: "where", w: "zu Hause", ty: "phrase", m: "At home.", de: "Ich bin *zu Hause*.", en: "I'm at home.", tip: "Going home is nach Hause: Ich gehe nach Hause." }
+  ]
+};
+
+A1.batches["a1-1-b7"].story = {
+  title: "Tom looks at a flat",
+  intro: "Tom's flat is too small for him and Mia. Today he's viewing a new one, and twenty people are already waiting on the stairs.",
+  lines: [
+    { who: "Landlord", de: "Guten Tag! Sie suchen eine {Wohnung}?", en: "Hello! You're looking for a flat?" },
+    { who: "Tom", de: "Ja! Ich bin Tom Rossi. Wie viel ist die {Miete}?", en: "Yes! I'm Tom Rossi. How much is the rent?" },
+    { who: "Landlord", de: "Tausend Euro. Kommen Sie! Die {Treppe} ist {links|links / rechts}.", en: "A thousand euros. Come on! The stairs are on the left." },
+    { who: "Tom", de: "Die Wohnung ist {oben|oben / unten}?", en: "The flat is upstairs?" },
+    { who: "Landlord", de: "Ja, oben. Hier ist der {Schlüssel}. Das {Haus} ist alt, aber die Wohnung ist {neu}.", en: "Yes, upstairs. Here's the key. The building is old, but the flat is new." },
+    { who: "Tom", de: "Wie viele {Zimmer} hat die Wohnung?", en: "How many rooms does the flat have?" },
+    { who: "Landlord", de: "Drei: das {Wohnzimmer}, das {Schlafzimmer} und ein Kinderzimmer.", en: "Three: the living room, the bedroom and a children's room." },
+    { who: "Tom", de: "Das Wohnzimmer ist {schön}! Und so {hell|hell / dunkel}!", en: "The living room is lovely! And so bright!" },
+    { who: "Landlord", de: "Ja, das {Fenster} ist groß.", en: "Yes, the window is big." },
+    { who: "Tom", de: "Und die {Küche}?", en: "And the kitchen?" },
+    { who: "Landlord", de: "Die Küche ist rechts. Mit {Tisch} und vier {Stühlen|Stuhl}.", en: "The kitchen is on the right. With a table and four chairs." },
+    { who: "Tom", de: "Super! Ich {koche|kochen} gern. Und das {Bad}?", en: "Great! I like cooking. And the bathroom?" },
+    { who: "Landlord", de: "Da, die {Tür} links.", en: "There, the door on the left." },
+    { who: "Tom", de: "Hat die Wohnung einen {Balkon}?", en: "Does the flat have a balcony?" },
+    { who: "Landlord", de: "Nein. Aber das {Bett}, das {Sofa} und der {Schrank} sind auch hier.", en: "No. But the bed, the sofa and the wardrobe stay here too." },
+    { who: "Tom", de: "Und die {Lampe}?", en: "And the lamp?" },
+    { who: "Landlord", de: "Die Lampe? Die ist kaputt.", en: "The lamp? That's broken." },
+    { who: "Tom", de: "Ist es hier {laut}?", en: "Is it noisy here?" },
+    { who: "Landlord", de: "Nein! Der {Nachbar} unten ist alt. Er {schläft|schlafen} am Tag.", en: "No! The neighbour downstairs is old. He sleeps during the day." },
+    { who: "Neighbour", de: "TÖÖÖÖÖT!", en: "(a trumpet, very loud, from downstairs)" },
+    { who: "Landlord", de: "Ähm ... nur am Samstag.", en: "Um ... only on Saturdays." },
+    { who: "Tom", de: "Heute ist Samstag.", en: "Today is Saturday." },
+    { who: "Tom", de: "OK. Ich nehme die Wohnung!", en: "OK. I'll take the flat!" },
+    { who: "Landlord", de: "Gut. Aber am Samstag {putzen} Sie bitte die Treppe.", en: "Good. But please clean the stairs on Saturdays." },
+    { who: "Mia", de: "Papa, sind wir jetzt hier {zu Hause}?", en: "Dad, is this home now?" },
+    { who: "Tom", de: "Ja, Mia!", en: "Yes, Mia!" },
+    { who: "Neighbour", de: "TÖÖÖÖÖT!", en: "(the trumpet again)" }
+  ]
+};
