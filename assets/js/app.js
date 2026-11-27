@@ -30,12 +30,12 @@ function index() {
   };
   app.innerHTML = `
   <header class="band"><div class="wrap">
-    <h1>Deutsch lernen</h1>
+    <h1 lang="de">Deutsch lernen</h1>
     <p class="lead">Core German vocabulary, level by level from A1 upward, served in small themed batches. Each word comes with a plain meaning, a real-life sentence, its English translation, and for nouns a weird little scene that glues the article to it.*</p>
     <div class="cast">
-      <div class="who">${FIG.der}<div><b class="c-der">der</b><span>The Superhero. Masculine nouns. Cape, ego, loud entrances.</span></div></div>
-      <div class="who">${FIG.die}<div><b class="c-die">die</b><span>The Queen. Feminine nouns. Crown, drama, very high standards.</span></div></div>
-      <div class="who">${FIG.das}<div><b class="c-das">das</b><span>The Big Fat German Baby. Neuter nouns. Drools, burps, sits on things.</span></div></div>
+      <div class="who">${FIG.der}<div><b class="c-der" lang="de">der</b><span>The Superhero. Masculine nouns. Cape, ego, loud entrances.</span></div></div>
+      <div class="who">${FIG.die}<div><b class="c-die" lang="de">die</b><span>The Queen. Feminine nouns. Crown, drama, very high standards.</span></div></div>
+      <div class="who">${FIG.das}<div><b class="c-das" lang="de">das</b><span>The Big Fat German Baby. Neuter nouns. Drools, burps, sits on things.</span></div></div>
     </div>
   </div></header>
   ${A1.tracks.map((t, i) => `<section class="band track" style="${i % 2 ? "background:var(--band)" : ""}"><div class="wrap">
@@ -67,16 +67,16 @@ function batch(b) {
   let known = load(b.id), filt = "all";
   document.title = `${b.track.title} Batch ${b.n} | Deutsch lernen`;
 
-  const card = x => `<article class="card${known[x.w] ? " done" : ""}" id="w-${W.indexOf(x)}" tabindex="0" data-w="${esc(x.w)}" data-k="${kind(x)}" style="--k:${col(x)}">
+  const card = x => `<article class="card${known[x.w] ? " done" : ""}" id="w-${W.indexOf(x)}" data-w="${esc(x.w)}" data-k="${kind(x)}" style="--k:${col(x)}">
     <button class="known" aria-label="Mark ${esc(x.w)} as known" aria-pressed="${!!known[x.w]}">&#10003;</button>
-    <div class="top">${x.a ? `<span class="art">${x.a}</span>` : ""}<span class="word">${x.w}</span>${x.pl ? `<span class="pl">pl. ${x.pl}</span>` : ""}</div>
+    <div class="top" lang="de">${x.a ? `<span class="art">${x.a}</span>` : ""}<span class="word">${x.w}</span>${x.pl ? `<span class="pl">pl. ${x.pl}</span>` : ""}</div>
     <div class="tag">${x.ty}</div>
     <p class="mean q">${x.m}</p>
-    ${x.f ? `<p class="forms q">${x.f}</p>` : ""}
-    <div class="ex"><div class="de">${mark(x.de)}</div><div class="en q">${x.en}</div></div>
+    ${x.f ? `<p class="forms q" lang="de">${x.f}</p>` : ""}
+    <div class="ex"><div class="de" lang="de">${mark(x.de)}</div><div class="en q">${x.en}</div></div>
     ${x.tip ? `<p class="tip q">${x.tip}</p>` : ""}
     ${x.sc ? `<div class="scene">${x.sc}</div>` : ""}
-    <div class="hint">Tap to reveal</div>
+    <button class="reveal" aria-expanded="false" aria-controls="w-${W.indexOf(x)}">Show answer</button>
   </article>`;
   const nav = (x, dir) => x
     ? (ready(x) ? `<a href="#${x.id}" class="${dir}"><small>${dir === "r" ? "Next" : "Previous"}: batch ${x.n}</small><b>${x.title}</b></a>` : `<div class="${dir}"><small>Next: batch ${x.n}, coming soon</small><b>${x.title}</b></div>`)
@@ -88,7 +88,7 @@ function batch(b) {
     return `<button class="hl" data-i="${i}" style="--k:${col(W[i])}" title="${esc(W[i].w)}">${txt}</button>`;
   });
   const covText = cov.covered === cov.total ? `All ${cov.total} words from this batch show up below` : `${cov.covered} of the ${cov.total} words from this batch show up below`;
-  const storyLines = S ? S.lines.map(l => `<div class="line"><span class="who2">${l.who}</span><div><div class="sde">${hl(l.de)}</div><div class="sen">${l.en}</div></div></div>`).join("") : "";
+  const storyLines = S ? S.lines.map((l, j) => `<div class="line"><span class="who2">${l.who}</span><div><div class="sde" lang="de">${hl(l.de)}</div><div class="sen" id="s-${j}">${l.en}</div><button class="reveal" aria-expanded="false" aria-controls="s-${j}">Show English</button></div></div>`).join("") : "";
   const story = S ? `<section class="band" id="story" style="background:var(--band)"><div class="wrap">
     <h2>Story time: ${S.title}</h2>
     <p class="sub">${S.intro} ${covText}, in their article colour. Tap one to jump to its card.</p>
@@ -100,7 +100,7 @@ function batch(b) {
     <a class="back" href="#">&larr; All batches</a>
     <h1>${b.title}</h1>
     <p class="lead">${b.track.title}, batch ${b.n} of ${list.length}. ${B.lead}</p>
-    <div class="legend"><span>${FIG.der}<b class="c-der">der</b> Superhero</span><span>${FIG.die}<b class="c-die">die</b> Queen</span><span>${FIG.das}<b class="c-das">das</b> Big Fat Baby</span><span style="color:var(--soft)">Plural: always die*</span>${S ? `<a class="chip" href="#" id="toStory">Jump to the story</a>` : ""}</div>
+    <div class="legend"><span>${FIG.der}<b class="c-der" lang="de">der</b> Superhero</span><span>${FIG.die}<b class="c-die" lang="de">die</b> Queen</span><span>${FIG.das}<b class="c-das" lang="de">das</b> Big Fat Baby</span><span style="color:var(--soft)">Plural: always die*</span>${S ? `<a class="chip" href="#" id="toStory">Jump to the story</a>` : ""}</div>
   </div></header>
   <div class="bar"><div class="wrap">
     <button class="chip" data-f="all" aria-pressed="true">All ${W.length}</button>
@@ -125,12 +125,25 @@ function batch(b) {
     main.querySelectorAll("section").forEach(s => { s.style.display = [...s.querySelectorAll(".card")].some(c => c.style.display !== "none") ? "" : "none"; });
   };
   document.querySelectorAll("[data-f]").forEach(btn => btn.onclick = () => { filt = btn.dataset.f; document.querySelectorAll("[data-f]").forEach(o => o.setAttribute("aria-pressed", o === btn)); apply(); });
-  $("#test").onclick = () => { const on = !document.body.classList.contains("test"); document.body.classList.toggle("test", on); $("#test").setAttribute("aria-pressed", on); main.querySelectorAll(".card.open").forEach(c => c.classList.remove("open")); };
+  // Hidden answers are hidden from screen readers too, not only blurred.
+  const setOpen = (el, open, hiddenWhenClosed, label) => {
+    el.classList.toggle("open", open);
+    const btn = el.querySelector(".reveal");
+    btn.setAttribute("aria-expanded", open); btn.textContent = (open ? "Hide " : "Show ") + label;
+    el.querySelectorAll(hiddenWhenClosed).forEach(q => { if (open) q.removeAttribute("aria-hidden"); else q.setAttribute("aria-hidden", "true"); });
+  };
+  const testOn = () => document.body.classList.contains("test");
+  const resetCards = () => main.querySelectorAll(".card").forEach(c => {
+    c.classList.remove("open"); c.querySelector(".reveal").setAttribute("aria-expanded", false); c.querySelector(".reveal").textContent = "Show answer";
+    c.querySelectorAll(".q").forEach(q => { if (testOn()) q.setAttribute("aria-hidden", "true"); else q.removeAttribute("aria-hidden"); });
+  });
+  $("#test").onclick = () => { document.body.classList.toggle("test", !testOn()); $("#test").setAttribute("aria-pressed", testOn()); resetCards(); };
   $("#reset").onclick = () => $("#ask").classList.add("on");
   $("#no").onclick = () => $("#ask").classList.remove("on");
   $("#yes").onclick = () => {
     known = {}; store(b.id, known);
-    main.querySelectorAll(".card").forEach(c => { c.classList.remove("done", "open"); c.querySelector(".known").setAttribute("aria-pressed", false); });
+    main.querySelectorAll(".card").forEach(c => { c.classList.remove("done"); c.querySelector(".known").setAttribute("aria-pressed", false); });
+    resetCards();
     $("#ask").classList.remove("on"); prog(); apply();
   };
   main.onclick = e => {
@@ -140,13 +153,16 @@ function batch(b) {
       const w = c.dataset.w; if (known[w]) delete known[w]; else known[w] = 1;
       store(b.id, known); c.classList.toggle("done", !!known[w]); k.setAttribute("aria-pressed", !!known[w]); prog(); if (filt === "left") apply(); return;
     }
-    if (document.body.classList.contains("test")) c.classList.toggle("open");
+    // The reveal button works with keyboard and screen readers; a tap anywhere else on the card is a mouse shortcut.
+    if (testOn() && (e.target.closest(".reveal") || !e.target.closest("button, a"))) setOpen(c, !c.classList.contains("open"), ".q", "answer");
   };
-  main.onkeydown = e => { if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("card") && document.body.classList.contains("test")) { e.preventDefault(); e.target.classList.toggle("open"); } };
   if (S) {
     const st = $("#story");
     $("#toStory").onclick = e => { e.preventDefault(); st.scrollIntoView({ behavior: "smooth" }); };
-    $("#noen").onclick = () => { const on = !st.classList.contains("noen"); st.classList.toggle("noen", on); $("#noen").setAttribute("aria-pressed", on); st.querySelectorAll(".line.open").forEach(l => l.classList.remove("open")); };
+    $("#noen").onclick = () => {
+      const on = !st.classList.contains("noen"); st.classList.toggle("noen", on); $("#noen").setAttribute("aria-pressed", on);
+      st.querySelectorAll(".line").forEach(l => { setOpen(l, false, ".sen", "English"); if (!on) l.querySelector(".sen").removeAttribute("aria-hidden"); });
+    };
     st.onclick = e => {
       const h = e.target.closest(".hl");
       if (h) {
@@ -154,7 +170,7 @@ function batch(b) {
         const c = $("#w-" + h.dataset.i); c.scrollIntoView({ behavior: "smooth", block: "center" });
         c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash"); return;
       }
-      const l = e.target.closest(".line"); if (l && st.classList.contains("noen")) l.classList.toggle("open");
+      const l = e.target.closest(".line"); if (l && st.classList.contains("noen")) setOpen(l, !l.classList.contains("open"), ".sen", "English");
     };
   }
   prog();

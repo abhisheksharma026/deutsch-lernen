@@ -85,8 +85,9 @@ section .sub{color:var(--soft);margin:0 0 16px;font-size:15px;max-width:66ch}
 .done .known{background:var(--das);border-color:var(--das);color:#fff}
 .test .card:not(.open) .q{filter:blur(7px);user-select:none}
 .test .card{cursor:pointer}
-.hint{display:none;font-size:13px;color:var(--soft);margin-top:10px}
-.test .card:not(.open) .hint{display:block}
+.reveal{display:none;align-items:center;min-height:36px;margin-top:10px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 14px Figtree,sans-serif;cursor:pointer}
+.test .card .reveal,.noen .line .reveal{display:inline-flex}
+.reveal:focus-visible{outline:3px solid var(--der);outline-offset:2px}
 .pn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .pn a,.pn div{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;min-height:44px}
 .pn a:hover{border-color:var(--ink)}
