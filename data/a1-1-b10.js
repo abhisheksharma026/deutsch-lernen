@@ -61,7 +61,7 @@ A1.batches["a1-1-b10"].story = {
     { who: "Mama", de: "Tom! Ich {höre|hören} {Musik}! {Tanzen|tanzen} wir!", en: "Tom! I can hear music! Let's dance!" },
     { who: "Tom", de: "Mama, nein!", en: "Mum, no!" },
     { who: "Anna", de: "{Magst|mögen} du die Party, Tom?", en: "Do you like the party, Tom?" },
-    { who: "Tom", de: "Ja! Ich bin {glücklich}. Das ist {interessant}: am Montag traurig, am Samstag glücklich.", en: "Yes! I'm happy. Funny, that: sad on Monday, happy on Saturday." },
+    { who: "Tom", de: "Ja! Ich bin {glücklich}. Das ist {interessant}: am Montag traurig, am Samstag glücklich.", en: "Yes! I'm happy. That's interesting: sad on Monday, happy on Saturday." },
     { who: "Anna", de: "Und im {Urlaub}? Wo bist du am liebsten? In Rom?", en: "And on holiday? Where would you most like to be? In Rome?" },
     { who: "Tom", de: "Nein. Am liebsten hier, in Berlin.", en: "No. Most of all, here in Berlin." }
   ]
