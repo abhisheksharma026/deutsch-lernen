@@ -39,7 +39,7 @@ A1.batches["a1-1-b5"] = {
     { g: "taste", w: "vegetarisch", ty: "adjective", m: "Vegetarian.", de: "Ist das *vegetarisch*?", en: "Is that vegetarian?", tip: "vegan is also just vegan. Berlin is one of the easiest cities in Europe for both." },
     { g: "order", w: "gern", ty: "adverb", m: "Gladly. After a verb it means you like doing it.", de: "Ich trinke *gern* Tee.", en: "I like drinking tea.", tip: "\"Gern!\" alone = \"Sure! / With pleasure!\"" },
     { g: "order", w: "noch", ty: "adverb", m: "Another / more. Also \"still\".", de: "*Noch* ein Bier, bitte!", en: "Another beer, please!" },
-    { g: "order", w: "mit / ohne", ty: "prepositions", m: "With / without.", de: "Einen Tee *ohne* Milch, bitte.", en: "A tea without milk, please." }
+    { g: "order", w: "mit / ohne", v: ["mit", "ohne"], ty: "prepositions", m: "With / without.", de: "Einen Tee *ohne* Milch, bitte.", en: "A tea without milk, please." }
   ]
 };
 
@@ -51,7 +51,7 @@ A1.batches["a1-1-b5"].story = {
     { who: "Anna", de: "Ja. Wir {möchten} {Frühstück}.", en: "Yes. We'd like breakfast." },
     { who: "Waiter", de: "Was {trinken} Sie?", en: "What would you like to drink?" },
     { who: "Tom", de: "Einen {Kaffee}, bitte. {Mit|mit / ohne} {Milch}.", en: "A coffee, please. With milk." },
-    { who: "Anna", de: "Und einen {Tee}, bitte.", en: "And a tea, please." },
+    { who: "Anna", de: "Und einen {Tee} {ohne|mit / ohne} Milch, bitte.", en: "And a tea without milk, please." },
     { who: "Leo", de: "Ich habe {Durst}! Einen {Orangensaft|Saft}!", en: "I'm thirsty! An orange juice!" },
     { who: "Waiter", de: "Und was {essen} Sie?", en: "And what will you eat?" },
     { who: "Tom", de: "Ich habe {Hunger}! Zwei {Brötchen} mit {Käse} und {Wurst}, und ein {Ei}.", en: "I'm hungry! Two rolls with cheese and sausage, and an egg." },

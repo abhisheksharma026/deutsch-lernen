@@ -30,14 +30,14 @@ A1.batches["a1-1-b8"] = {
     { g: "verb", w: "gehen", ty: "verb", m: "To go on foot, to walk. Also \"to work\" or \"to be possible\".", f: "ich <b>gehe</b>, du <b>gehst</b>, er/sie <b>geht</b>", de: "Ich *gehe* nach Hause.", en: "I'm going home.", tip: "Wie geht's? = How's it going? Das geht nicht = That doesn't work." },
     { g: "verb", w: "fahren", ty: "verb, irregular", m: "To go by vehicle, to drive, to ride.", f: "ich <b>fahre</b>, du <b>fährst</b>, er/sie <b>fährt</b>", de: "Ich *fahre* mit dem Bus.", en: "I'm going by bus.", tip: "a becomes ä for du and er/sie, the same pattern as schlafen." },
     { g: "verb", w: "umsteigen", ty: "verb, separable", m: "To change (trains, buses).", f: "ich <b>steige</b> ... <b>um</b>, du <b>steigst</b> ... <b>um</b>", de: "Sie *steigen* am Alexanderplatz *um*.", en: "You change at Alexanderplatz." },
-    { g: "verb", w: "einsteigen / aussteigen", ty: "verbs, separable", m: "To get on / to get off.", f: "ich <b>steige</b> ... <b>ein</b>, ich <b>steige</b> ... <b>aus</b>", de: "Ich *steige* hier *aus*.", en: "I'm getting off here.", tip: "You'll hear \"Bitte einsteigen!\" and \"Alle aussteigen!\" on every platform." },
+    { g: "verb", w: "einsteigen / aussteigen", v: ["einsteigen|steige ... ein|steigen ... ein", "aussteigen|steige ... aus|steigen ... aus"], ty: "verbs, separable", m: "To get on / to get off.", f: "ich <b>steige</b> ... <b>ein</b>, ich <b>steige</b> ... <b>aus</b>", de: "Ich *steige* hier *aus*.", en: "I'm getting off here.", tip: "You'll hear \"Bitte einsteigen!\" and \"Alle aussteigen!\" on every platform." },
     { g: "dir", w: "geradeaus", ty: "adverb", m: "Straight ahead.", de: "Gehen Sie *geradeaus*.", en: "Go straight ahead." },
     { g: "dir", w: "dann", ty: "adverb", m: "Then, after that.", de: "Gehen Sie links, *dann* geradeaus.", en: "Go left, then straight on." },
-    { g: "dir", w: "weit / nah", ty: "adjectives", m: "Far / near, close.", de: "Ist es *weit*?", en: "Is it far?" },
+    { g: "dir", w: "weit / nah", v: ["weit", "nah"], ty: "adjectives", m: "Far / near, close.", de: "Ist es *weit*?", en: "Is it far?" },
     { g: "dir", w: "nach", ty: "preposition", m: "To, for cities and countries. Also in nach Hause.", de: "Wir fahren *nach* Hamburg.", en: "We're going to Hamburg.", tip: "nach for cities, countries and home. zum / zur for places and people." },
-    { g: "dir", w: "zum / zur", ty: "prepositions", m: "To the. zum for der and das words, zur for die words.", f: "<b>zum</b> Bahnhof (der), <b>zum</b> Café (das), <b>zur</b> Haltestelle (die)", de: "Ich fahre *zum* Bahnhof.", en: "I'm going to the station.", tip: "Your articles pay off here: you can only pick zum or zur if you know der, die or das." },
+    { g: "dir", w: "zum / zur", v: ["zum", "zur"], ty: "prepositions", m: "To the. zum for der and das words, zur for die words.", f: "<b>zum</b> Bahnhof (der), <b>zum</b> Café (das), <b>zur</b> Haltestelle (die)", de: "Ich fahre *zum* Bahnhof.", en: "I'm going to the station.", tip: "Your articles pay off here: you can only pick zum or zur if you know der, die or das." },
     { g: "dir", w: "zu Fuß", ty: "phrase", m: "On foot.", de: "Ich gehe *zu Fuß*.", en: "I'm walking." },
-    { g: "dir", w: "schnell / langsam", ty: "adjectives", m: "Fast / slow.", de: "Die U-Bahn ist *schnell*.", en: "The underground is fast.", tip: "Langsam, bitte! = Slowly, please! Use it when someone speaks German too fast for you." },
+    { g: "dir", w: "schnell / langsam", v: ["schnell", "langsam"], ty: "adjectives", m: "Fast / slow.", de: "Die U-Bahn ist *schnell*.", en: "The underground is fast.", tip: "Langsam, bitte! = Slowly, please! Use it when someone speaks German too fast for you." },
     { g: "dir", w: "Wie komme ich zum ...?", ty: "phrase", m: "How do I get to ...? Use zur for die words.", de: "*Wie komme ich zum* Bahnhof?", en: "How do I get to the station?" }
   ]
 };
@@ -50,7 +50,7 @@ A1.batches["a1-1-b8"].story = {
     { who: "Woman", de: "Zum Flughafen? Das ist {weit|weit / nah}! Nicht {zu Fuß}!", en: "To the airport? That's far! Not on foot!" },
     { who: "Woman", de: "{Gehen|gehen} Sie die {Straße} {geradeaus} bis {zur|zum / zur} {Ampel}, {dann} links. Da ist die {Haltestelle}.", en: "Go straight down the street to the traffic light, then left. The stop is there." },
     { who: "Tom", de: "Mit dem {Bus}?", en: "By bus?" },
-    { who: "Woman", de: "Nein, die {Straßenbahn}. Sie {fahren|fahren} zum {Bahnhof}. Da {steigen Sie um|umsteigen} in den {Zug}. Er ist {schnell|schnell / langsam}.", en: "No, the tram. You go to the station. There you change to the train. It's fast." },
+    { who: "Woman", de: "Nein, die {Straßenbahn}. Sie {fahren|fahren} zum {Bahnhof}. Da {steigen Sie um|umsteigen} in den {Zug}. Er ist {schnell|schnell / langsam}. Der Bahnhof ist {nah|weit / nah}.", en: "No, the tram. You go to the station. There you change to the train. It's fast. The station is close." },
     { who: "Tom", de: "Danke! ... Wo ist der {Fahrplan}? Ah, {Linie} M10.", en: "Thanks! ... Where's the timetable? Ah, line M10." },
     { who: "Tram", de: "Bitte {einsteigen|einsteigen / aussteigen}!", en: "All aboard, please!" },
     { who: "Tom", de: "Ist der {Platz} frei?", en: "Is this seat free?" },

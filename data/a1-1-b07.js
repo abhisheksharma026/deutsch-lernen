@@ -35,10 +35,10 @@ A1.batches["a1-1-b7"] = {
     { g: "verb", w: "putzen", ty: "verb", m: "To clean.", f: "ich <b>putze</b>, du <b>putzt</b>, er/sie <b>putzt</b>", de: "Am Samstag *putze* ich die Wohnung.", en: "On Saturday I clean the flat.", tip: "Many buildings have a cleaning plan for the stairs, and tenants take turns. Check the notice board in the hallway." },
     { g: "adj", w: "schön", ty: "adjective", m: "Beautiful, nice, lovely.", de: "Die Wohnung ist *schön*!", en: "The flat is lovely!" },
     { g: "adj", w: "neu", ty: "adjective", m: "New.", de: "Das Sofa ist *neu*.", en: "The sofa is new." },
-    { g: "adj", w: "hell / dunkel", ty: "adjectives", m: "Bright, full of light / dark.", de: "Das Zimmer ist *hell*.", en: "The room is bright.", tip: "hell is one of the biggest selling points in a German flat ad." },
+    { g: "adj", w: "hell / dunkel", v: ["hell", "dunkel"], ty: "adjectives", m: "Bright, full of light / dark.", de: "Das Zimmer ist *hell*.", en: "The room is bright.", tip: "hell is one of the biggest selling points in a German flat ad." },
     { g: "adj", w: "laut", ty: "adjective", m: "Loud, noisy. The opposite is leise (quiet).", de: "Es ist *laut* hier.", en: "It's noisy here.", tip: "Quiet hours: usually 22 to 6 Uhr, and all day Sunday. No drilling, no loud music." },
-    { g: "where", w: "oben / unten", ty: "adverbs", m: "Upstairs, above / downstairs, below.", de: "Mein Nachbar wohnt *oben*.", en: "My neighbour lives upstairs." },
-    { g: "where", w: "links / rechts", ty: "adverbs", m: "On the left / on the right.", de: "Das Bad ist *links*.", en: "The bathroom is on the left." },
+    { g: "where", w: "oben / unten", v: ["oben", "unten"], ty: "adverbs", m: "Upstairs, above / downstairs, below.", de: "Mein Nachbar wohnt *oben*.", en: "My neighbour lives upstairs." },
+    { g: "where", w: "links / rechts", v: ["links", "rechts"], ty: "adverbs", m: "On the left / on the right.", de: "Das Bad ist *links*.", en: "The bathroom is on the left." },
     { g: "where", w: "zu Hause", ty: "phrase", m: "At home.", de: "Ich bin *zu Hause*.", en: "I'm at home.", tip: "Going home is nach Hause: Ich gehe nach Hause." }
   ]
 };
@@ -55,6 +55,8 @@ A1.batches["a1-1-b7"].story = {
     { who: "Tom", de: "Wie viele {Zimmer} hat die Wohnung?", en: "How many rooms does the flat have?" },
     { who: "Landlord", de: "Drei: das {Wohnzimmer}, das {Schlafzimmer} und ein Kinderzimmer.", en: "Three: the living room, the bedroom and a children's room." },
     { who: "Tom", de: "Das Wohnzimmer ist {schön}! Und so {hell|hell / dunkel}!", en: "The living room is lovely! And so bright!" },
+    { who: "Landlord", de: "Und das Schlafzimmer ist {dunkel|hell / dunkel}.", en: "And the bedroom is dark." },
+    { who: "Tom", de: "Super! Ich schlafe gern.", en: "Great! I like sleeping." },
     { who: "Landlord", de: "Ja, das {Fenster} ist groß.", en: "Yes, the window is big." },
     { who: "Tom", de: "Und die {Küche}?", en: "And the kitchen?" },
     { who: "Landlord", de: "Die Küche ist rechts. Mit {Tisch} und vier {Stühlen|Stuhl}.", en: "The kitchen is on the right. With a table and four chairs." },

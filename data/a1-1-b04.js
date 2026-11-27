@@ -19,7 +19,7 @@ A1.batches["a1-1-b4"] = {
     { g: "days", w: "Tag", a: "der", pl: "die Tage", ty: "noun", m: "Day.", de: "Guten *Tag*!", en: "Good day! / Hello! (formal)", tip: "gut becomes guten here. Ending rules come later, just learn Guten Tag as one block.", sc: "The <b>Superhero</b> only works during the day. At sunset his cape falls asleep, and he drops out of the sky straight onto a Currywurst stand." },
     { g: "days", w: "Woche", a: "die", pl: "die Wochen", ty: "noun", m: "Week.", de: "Eine *Woche* hat sieben Tage.", en: "A week has seven days.", sc: "The <b>Queen</b> has a different crown for each day of the week. On Sunday she can't decide, so she wears all seven stacked on top of each other and can't fit through the door." },
     { g: "days", w: "Wochenende", a: "das", pl: "die Wochenenden", ty: "noun", m: "Weekend.", de: "Am *Wochenende* habe ich Zeit.", en: "I have time at the weekend.", tip: "die Woche + das Ende = das Wochenende. The last part always decides the article.", sc: "The <b>Big Fat Baby</b> spends the whole weekend in a bathtub of warm milk, from Friday night to Monday morning, snoring bubbles." },
-    { g: "days", w: "Montag ... Sonntag", a: "der", ty: "nouns, the days of the week", m: "Monday to Sunday. Every one of them is der.", f: "<b>Montag</b>, <b>Dienstag</b>, <b>Mittwoch</b>, <b>Donnerstag</b>, <b>Freitag</b>, <b>Samstag</b>, <b>Sonntag</b>", de: "*Mittwoch* passt gut.", en: "Wednesday works well.", tip: "Mittwoch = mid-week, the only day not ending in -tag.", sc: "Each day of the week is its own <b>Superhero</b>. Mr Montag is grumpy and flies slowly. Mr Freitag throws pizza from the sky. Mr Sonntag refuses to get out of bed." },
+    { g: "days", w: "Montag ... Sonntag", v: ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"], a: "der", ty: "nouns, the days of the week", m: "Monday to Sunday. Every one of them is der.", f: "<b>Montag</b>, <b>Dienstag</b>, <b>Mittwoch</b>, <b>Donnerstag</b>, <b>Freitag</b>, <b>Samstag</b>, <b>Sonntag</b>", de: "*Mittwoch* passt gut.", en: "Wednesday works well.", tip: "Mittwoch = mid-week, the only day not ending in -tag.", sc: "Each day of the week is its own <b>Superhero</b>. Mr Montag is grumpy and flies slowly. Mr Freitag throws pizza from the sky. Mr Sonntag refuses to get out of bed." },
     { g: "days", w: "Abend", a: "der", pl: "die Abende", ty: "noun", m: "Evening.", de: "Heute *Abend* habe ich Zeit.", en: "I have time tonight. (this evening)", tip: "Guten Abend = good evening. heute Abend = tonight.", sc: "Every evening the <b>Superhero</b> hangs his cape on the balcony to dry. Every evening a Berlin fox steals it and wears it around the Hasenheide." },
     { g: "days", w: "Nacht", a: "die", pl: "die Nächte", ty: "noun", m: "Night.", de: "Gute *Nacht*!", en: "Good night!", sc: "The <b>Queen</b>'s crown glows in the dark like a night light, so she can't sleep. Every night she puts it in the fridge. The milk is now royal." },
     { g: "when", w: "heute", ty: "adverb", m: "Today.", de: "*Heute* ist Montag.", en: "Today is Monday." },
@@ -39,7 +39,7 @@ A1.batches["a1-1-b4"] = {
     { g: "little", w: "wie lange", ty: "question words", m: "How long (time).", de: "*Wie lange* dauert der Termin?", en: "How long does the appointment take?" },
     { g: "little", w: "um", ty: "preposition", m: "At, for clock times.", de: "Der Termin ist *um* zehn Uhr.", en: "The appointment is at ten o'clock." },
     { g: "little", w: "am", ty: "preposition", m: "On, for days and parts of the day.", de: "*Am* Montag habe ich einen Termin.", en: "On Monday I have an appointment.", tip: "am Montag, am Wochenende, am Abend. But: in der Nacht." },
-    { g: "little", w: "von ... bis", ty: "prepositions", m: "From ... to / until.", de: "Der Deutschkurs ist *von* Montag *bis* Donnerstag.", en: "The German course is from Monday to Thursday.", tip: "bis alone works too: Bis morgen! = until tomorrow, see you tomorrow." }
+    { g: "little", w: "von ... bis", v: ["von", "bis"], ty: "prepositions", m: "From ... to / until.", de: "Der Deutschkurs ist *von* Montag *bis* Donnerstag.", en: "The German course is from Monday to Thursday.", tip: "bis alone works too: Bis morgen! = until tomorrow, see you tomorrow." }
   ]
 };
 
@@ -53,8 +53,10 @@ A1.batches["a1-1-b4"].story = {
     { who: "Tom", de: "{Heute}?", en: "Today?" },
     { who: "Frau Schmidt", de: "Heute? Ha! Nein.", en: "Today? Ha! No." },
     { who: "Tom", de: "{Morgen}?", en: "Tomorrow?" },
+    { who: "Frau Schmidt", de: "Nein.", en: "No." },
+    { who: "Tom", de: "{Dienstag|Montag ... Sonntag}? {Donnerstag|Montag ... Sonntag}?", en: "Tuesday? Thursday?" },
     { who: "Frau Schmidt", de: "Nein. Die {Woche} ist nicht {frei}.", en: "No. The week isn't free." },
-    { who: "Tom", de: "Und am {Wochenende}?", en: "And at the weekend?" },
+    { who: "Tom", de: "Und am {Wochenende}? {Samstag|Montag ... Sonntag}? {Sonntag|Montag ... Sonntag}?", en: "And at the weekend? Saturday? Sunday?" },
     { who: "Frau Schmidt", de: "Am Wochenende? Nein! Wir sind {von|von ... bis} {Montag|Montag ... Sonntag} {bis|von ... bis} Freitag hier.", en: "At the weekend? No! We're here from Monday to Friday." },
     { who: "Frau Schmidt", de: "{Passt|passen} {am} Mittwoch, {halb} neun?", en: "Does Wednesday at half past eight work?" },
     { who: "Tom", de: "Halb neun? Das ist {früh}!", en: "Half past eight? That's early!" },

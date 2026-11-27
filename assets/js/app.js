@@ -82,15 +82,16 @@ function batch(b) {
     ? (ready(x) ? `<a href="#${x.id}" class="${dir}"><small>${dir === "r" ? "Next" : "Previous"}: batch ${x.n}</small><b>${x.title}</b></a>` : `<div class="${dir}"><small>Next: batch ${x.n}, coming soon</small><b>${x.title}</b></div>`)
     : `<a href="#" class="${dir}"><small>${dir === "r" ? "Done with " + b.track.title : "Start"}</small><b>All batches</b></a>`;
 
-  const S = B.story, used = new Set();
-  const hl = t => t.replace(/\{([^}|]+)(?:\|([^}]+))?\}/g, (m, txt, k) => {
-    k = k || txt; let i = W.findIndex(x => x.w === k); if (i < 0) i = W.findIndex(x => x.w.toLowerCase() === k.toLowerCase()); if (i < 0) return txt; k = W[i].w;
-    used.add(k); return `<button class="hl" data-i="${i}" style="--k:${col(W[i])}" title="${esc(W[i].w)}">${txt}</button>`;
+  const S = B.story, cov = A1Coverage.coverage(B);
+  const hl = t => t.replace(A1Coverage.TAG, (m, txt, k) => {
+    const i = A1Coverage.find(W, k || txt); if (i < 0) return txt;
+    return `<button class="hl" data-i="${i}" style="--k:${col(W[i])}" title="${esc(W[i].w)}">${txt}</button>`;
   });
+  const covText = cov.covered === cov.total ? `All ${cov.total} words from this batch show up below` : `${cov.covered} of the ${cov.total} words from this batch show up below`;
   const storyLines = S ? S.lines.map(l => `<div class="line"><span class="who2">${l.who}</span><div><div class="sde">${hl(l.de)}</div><div class="sen">${l.en}</div></div></div>`).join("") : "";
   const story = S ? `<section class="band" id="story" style="background:var(--band)"><div class="wrap">
     <h2>Story time: ${S.title}</h2>
-    <p class="sub">${S.intro} All ${used.size} of the ${W.length} words from this batch show up below, in their article colour. Tap one to jump to its card.</p>
+    <p class="sub">${S.intro} ${covText}, in their article colour. Tap one to jump to its card.</p>
     <div class="bar2"><button class="chip" id="noen" aria-pressed="false">Hide English</button><span class="sub" style="margin:0">Read each line out loud. With English hidden, tap a line to check it.</span></div>
     <div class="story">${storyLines}</div>
   </div></section>` : "";
