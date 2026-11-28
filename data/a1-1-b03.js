@@ -25,7 +25,7 @@ A1.batches["a1-1-b3"] = {
     { g: "nbig", w: "13 to 19: -zehn", ty: "number pattern", m: "Small number + zehn, just like English \"-teen\".", f: "dreizehn, vierzehn, fünfzehn, <b>sechzehn</b>, <b>siebzehn</b>, achtzehn, neunzehn", de: "Meine Schwester ist *sechzehn*.", en: "My sister is sixteen.", tip: "Two shortcuts: sechzehn drops the s, siebzehn drops the en." },
     { g: "nbig", w: "20 to 90: -zig", ty: "number pattern", m: "The tens end in -zig, like English \"-ty\".", f: "zwanzig, <b>dreißig</b>, vierzig, fünfzig, <b>sechzig</b>, <b>siebzig</b>, achtzig, neunzig", de: "Das kostet *dreißig* Euro.", en: "That costs thirty euros.", tip: "dreißig is the rebel: ß instead of z. sechzig and siebzig use the same shortcuts as the teens." },
     { g: "nbig", w: "21 to 99: back to front", ty: "number pattern", m: "Say the ones first, then \"und\", then the tens. 21 = one-and-twenty.", f: "21 <b>einundzwanzig</b>, 34 <b>vierunddreißig</b>, 99 <b>neunundneunzig</b>", de: "Ich bin *vierunddreißig* Jahre alt.", en: "I am thirty-four years old.", tip: "When someone says a price, write the second digit first, then the first. It feels odd for about a week, then it's automatic." },
-    { g: "nbig", w: "hundert / tausend", ty: "numbers, 100 and 1,000", m: "Hundred and thousand. Everything joins into one long word.", f: "250 <b>zweihundertfünfzig</b>, 2026 <b>zweitausendsechsundzwanzig</b>", de: "*Hundert* Euro? Das ist teuer!", en: "A hundred euros? That's expensive!", tip: "Years before 2000 use hundert: 1990 = neunzehnhundertneunzig." },
+    { g: "nbig", w: "hundert / tausend", v: ["hundert", "tausend"], ty: "numbers, 100 and 1,000", m: "Hundred and thousand. Everything joins into one long word.", f: "250 <b>zweihundertfünfzig</b>, 2026 <b>zweitausendsechsundzwanzig</b>", de: "*Hundert* Euro? Das ist teuer!", en: "A hundred euros? That's expensive!", tip: "Years before 2000 use hundert: 1990 = neunzehnhundertneunzig." },
     { g: "money", w: "Euro", a: "der", pl: "die Euro", ty: "noun", m: "Euro. Stays \"Euro\" after numbers: fünf Euro.", de: "Das kostet zwei *Euro* fünfzig.", en: "That costs two euros fifty.", tip: "Germans write 2,50 € with a comma, and say it \"zwei Euro fünfzig\".", sc: "The <b>Superhero</b> uses a giant euro coin as a shield. A bullet bounces off, the coin swings back and smacks him in the face. He now has a €-shaped bruise on his forehead and calls it a logo." },
     { g: "money", w: "Cent", a: "der", pl: "die Cent", ty: "noun", m: "Cent. 100 Cent = 1 Euro.", de: "Das kostet neunundneunzig *Cent*.", en: "That costs ninety-nine cents.", sc: "A single cent falls into a street drain. The <b>Superhero</b> uses laser eyes, super strength and his whole cape to get it out while a crowd films him. It turns out to be a bottle cap." },
     { g: "money", w: "Geld", a: "das", ty: "noun, no plural", m: "Money.", de: "Ich habe kein *Geld*.", en: "I don't have any money.", sc: "The <b>Big Fat Baby</b> grabs a 50-euro note, chews it for ten minutes and hands it to the Späti guy, dripping wet. He sighs and takes it." },
@@ -39,7 +39,7 @@ A1.batches["a1-1-b3"] = {
     { g: "pay", w: "teuer", ty: "adjective", m: "Expensive.", de: "Die Pizza ist *teuer*, aber gut.", en: "The pizza is expensive, but good." },
     { g: "pay", w: "billig", ty: "adjective", m: "Cheap. Can sound like \"cheap and bad\".", de: "Das Bier ist *billig*.", en: "The beer is cheap.", tip: "For a good price without the cheap feeling, Germans say günstig." },
     { g: "pay", w: "bar", ty: "adverb", m: "In cash.", de: "Ich zahle *bar*.", en: "I'm paying cash.", tip: "Plenty of Berlin cafés and Spätis are still cash only. Look for a sign saying \"Nur bar\"." },
-    { g: "pay", w: "zusammen / getrennt", ty: "adverbs", m: "Together / separately. Who pays what.", de: "*Zusammen* oder *getrennt*?", en: "One bill or separate?", tip: "The waiter asks this at every table. Getrennt means each person pays for their own food." }
+    { g: "pay", w: "zusammen / getrennt", v: ["zusammen", "getrennt"], ty: "adverbs", m: "Together / separately. Who pays what.", de: "*Zusammen* oder *getrennt*?", en: "One bill or separate?", tip: "The waiter asks this at every table. Getrennt means each person pays for their own food." }
   ]
 };
 
@@ -66,7 +66,7 @@ A1.batches["a1-1-b3"].story = {
     { who: "Tom", de: "Zusammen.", en: "Together." },
     { who: "Waiter", de: "Das kostet {elf} Euro {neunundneunzig|21 to 99: back to front}. Mit {Karte} oder {bar}?", en: "That's eleven euros ninety-nine. Card or cash?" },
     { who: "Tom", de: "Bar. Hier sind {zwölf} Euro. Danke!", en: "Cash. Here's twelve euros. Thanks!" },
-    { who: "Leo", de: "Ich {zahle|zahlen} auch! Hier: {hundert|hundert / tausend} Euro!", en: "I'm paying too! Here: a hundred euros!" },
+    { who: "Leo", de: "Ich {zahle|zahlen} auch! Hier: {hundert|hundert / tausend} Euro! Nein, {tausend|hundert / tausend}!", en: "I'm paying too! Here: a hundred euros! No, a thousand!" },
     { who: "Anna", de: "Leo, das ist ein Foto von Geld!", en: "Leo, that's a photo of money!" }
   ]
 };
