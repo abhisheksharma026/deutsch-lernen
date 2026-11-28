@@ -61,7 +61,7 @@ A1.batches["a1-1-b7"].story = {
     { who: "Tom", de: "Super! Ich {koche|kochen} gern. Und das {Bad}?", en: "Great! I like cooking. And the bathroom?" },
     { who: "Landlord", de: "Da, die {Tür} links.", en: "There, the door on the left." },
     { who: "Tom", de: "Hat die Wohnung einen {Balkon}?", en: "Does the flat have a balcony?" },
-    { who: "Landlord", de: "Nein. Aber das {Bett}, das {Sofa} und der {Schrank} sind auch hier.", en: "No. But the bed, the sofa and the wardrobe stay here too." },
+    { who: "Landlord", de: "Nein. Aber das {Bett}, das {Sofa} und der {Schrank} sind auch hier.", en: "No. But the bed, the sofa and the wardrobe are here too." },
     { who: "Tom", de: "Und die {Lampe}?", en: "And the lamp?" },
     { who: "Landlord", de: "Die Lampe? Die ist kaputt.", en: "The lamp? That's broken." },
     { who: "Tom", de: "Ist es hier {laut}?", en: "Is it noisy here?" },
